@@ -9,4 +9,4 @@ y = np.random.randint(0, 2, size=300)
 model = GradientBoostingClassifier()
 model.fit(X, y)
 
-joblib.dump(model, "models/model.pkl")
+joblib.dump(model, "train_model.py")
