@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: binance-testnet-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:$PORT main:app
+    envVars:
+      - key: BINANCE_API_KEY
+        value: your_testnet_api_key
+      - key: BINANCE_SECRET_KEY
+        value: your_testnet_secret_key
+      - key: BINANCE_API_BASE_URL
+        value: https://testnet.binance.vision
+      - key: TELEGRAM_TOKEN
+        value: your_telegram_bot_token
+      - key: CHAT_ID
+        value: your_telegram_chat_id
